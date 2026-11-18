@@ -19,3 +19,10 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export type SearchInputProps = Omit<TextInputProps, "icon" | "type">;
+
+//? Used Omit to prevent convert the type from number to password for example
+export interface NumberInputProps extends Omit<TextInputProps, "type">{
+  min?: number,
+  max?: number,
+  step?: number
+}
