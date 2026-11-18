@@ -15,4 +15,7 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   status?: InputStatus;
   errorMessage?: string;
+  icon?: ReactNode;
 }
+
+export type SearchInputProps = Omit<TextInputProps, "icon" | "type">;

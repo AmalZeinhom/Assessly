@@ -16,6 +16,7 @@ export default function TextInput({
   errorMessage,
   required,
   disabled,
+  icon,
   type = "text",
   className = "",
   ...props
@@ -45,15 +46,16 @@ export default function TextInput({
       errorMessage={errorMessage}
       required={required}
     >
-      <input
-        {...props}
-        id={inputId}
-        type={type}
-        required={required}
-        disabled={disabled}
-        aria-invalid={status === "error" ? true : props["aria-invalid"]}
-        aria-describedby={describedBy}
-        className={`
+      <div className="relative w-full">
+        <input
+          {...props}
+          id={inputId}
+          type={type}
+          required={required}
+          disabled={disabled}
+          aria-invalid={status === "error" ? true : props["aria-invalid"]}
+          aria-describedby={describedBy}
+          className={`
           w-full
           rounded-none
           border
@@ -70,10 +72,21 @@ export default function TextInput({
           disabled:cursor-not-allowed
           disabled:bg-gray-100
           disabled:text-gray-400
+          ${icon ? "pr-10" : ""}
           ${statusStyles[status]}
           ${className}
         `}
-      />
+        />
+
+        {icon && (
+          <span
+            aria-hidden="true"
+            className="absolute pointer-events-none right-3 top-1/2 -translate-y-1/2 text-gray-400"
+          >
+            {icon}
+          </span>
+        )}
+      </div>
     </FormField>
   );
 }
