@@ -16,7 +16,7 @@ export default function PasswordInput({ ...props }: PasswordInputProps) {
       {...props}
       type={isPasswordVisible ? "text" : "password"}
       autoComplete={props.autoComplete ?? "current-password"}
-      icon={
+      endIcon={
         <button
           type="button"
           onClick={togglePasswordVisibility}

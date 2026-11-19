@@ -16,7 +16,9 @@ export default function TextInput({
   errorMessage,
   required,
   disabled,
-  icon,
+  endIcon,
+  startIcon,
+  startIconContainerClassName = "",
   type = "text",
   className = "",
   ...props
@@ -72,17 +74,24 @@ export default function TextInput({
           disabled:cursor-not-allowed
           disabled:bg-gray-100
           disabled:text-gray-400
-          ${icon ? "pr-10" : ""}
+          ${startIcon ? "pl-35" : ""}
+          ${endIcon ? "pr-10" : ""}
           ${statusStyles[status]}
           ${className}
         `}
         />
 
-        {icon && (
+        {startIcon && (
           <span
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+            className={`absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 inline-flex items-center z-10 ${startIconContainerClassName}`}
           >
-            {icon}
+            {startIcon}
+          </span>
+        )}
+
+        {endIcon && (
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 inline-flex items-center z-10">
+            {endIcon}
           </span>
         )}
       </div>
