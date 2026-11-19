@@ -1,5 +1,6 @@
 'use client'
 
+import NumberInput from "@/components/ui/input/components/NumberInput";
 import TextInput from "@/components/ui/input/components/TextInput";
 import { PhoneCountry } from "@/components/ui/input/input.types";
 import PhoneInput from "@/components/ui/input/Phone/PhoneInput";
@@ -31,7 +32,13 @@ export default function Home() {
       label="Name"
       placeholder="Enter your name"
       required
-      
+
+      />
+
+      <NumberInput 
+      label="Age"
+      placeholder="Enter your age"
+      required
       />
     </main>
   );

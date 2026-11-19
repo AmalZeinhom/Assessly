@@ -8,7 +8,7 @@ export default function SearchInput(props: SearchInputProps) {
         {...props}
         type='search'
         placeholder={props.placeholder ?? "Search..."}
-        icon= {<Search size={18} />}
+        endIcon={ <Search size={18} /> }
     />
   )
 }
