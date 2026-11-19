@@ -26,3 +26,5 @@ export interface NumberInputProps extends Omit<TextInputProps, "type">{
   max?: number,
   step?: number
 }
+
+export type PasswordInputProps = Omit<TextInputProps, "icon" | "type">
