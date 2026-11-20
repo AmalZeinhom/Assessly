@@ -1,6 +1,7 @@
 "use client";
 
 import OTPInput from "@/components/ui/input/components/OTPInput";
+import Toast from "@/components/ui/toast/Toast";
 import Tooltip from "@/components/ui/tooltip/Tooltip";
 import { useState } from "react";
 
@@ -15,6 +16,10 @@ export default function Home() {
         onChange={setOtp}
         length={6}
         status="default"
+      />
+      <Toast 
+        message="Something went wrong"
+        variant="error"
       />
 
      

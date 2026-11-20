@@ -1,4 +1,4 @@
-import { ToastProps, ToastVariant } from "../input.types";
+import { ToastProps, ToastVariant } from "./toast.types"
 import {
   SquareCheck,
   SquareX,

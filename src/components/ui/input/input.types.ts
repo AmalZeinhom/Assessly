@@ -77,10 +77,4 @@ export interface OTPInputProps {
 }
 
 //!#############################
-export type ToastVariant = "success" | "error" | "info" | "warning";
 
-export interface ToastProps {
-  message: string;
-  variant?: ToastVariant;
-  icon?: ReactNode;
-}
