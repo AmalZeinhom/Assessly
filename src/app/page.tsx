@@ -1,9 +1,8 @@
 "use client";
 
 import OTPInput from "@/components/ui/input/components/OTPInput";
-import Toast from "@/components/ui/input/components/Toast";
+import Tooltip from "@/components/ui/tooltip/Tooltip";
 import { useState } from "react";
-import { SquareCheck } from "lucide-react";
 
 export default function Home() {
   const [otp, setOtp] = useState("");
@@ -18,7 +17,14 @@ export default function Home() {
         status="default"
       />
 
-      <Toast message="An Error Occurred" variant="warning" />
+     
+
+      <Tooltip
+        content= "Save Changes"
+        position="top"
+      >
+        <button>Save</button>
+      </Tooltip>
     </main>
   );
 }
