@@ -32,22 +32,22 @@ export type SearchInputProps = Omit<TextInputProps, "endIcon" | "type">;
 //!#############################
 
 //? Used Omit to prevent convert the type from number to password for example
-export interface NumberInputProps extends Omit<TextInputProps, "type">{
-  min?: number,
-  max?: number,
-  step?: number
+export interface NumberInputProps extends Omit<TextInputProps, "type"> {
+  min?: number;
+  max?: number;
+  step?: number;
 }
 
 //!#############################
 
-export type PasswordInputProps = Omit<TextInputProps, "endIcon" | "type">
+export type PasswordInputProps = Omit<TextInputProps, "endIcon" | "type">;
 
 //!#############################
 
 export interface PhoneCountry {
-  code: CountryCode, //ISO, like EG
-  name: string,
-  dialCode: string, // +20
+  code: CountryCode; //ISO, like EG
+  name: string;
+  dialCode: string; // +20
 }
 
 //!#############################
@@ -74,4 +74,13 @@ export interface OTPInputProps {
   errorMessage?: string;
   disabled?: boolean;
   required?: boolean;
+}
+
+//!#############################
+export type ToastVariant = "success" | "error" | "info" | "warning";
+
+export interface ToastProps {
+  message: string;
+  variant?: ToastVariant;
+  icon?: ReactNode;
 }

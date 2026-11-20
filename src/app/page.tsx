@@ -1,14 +1,12 @@
-'use client'
+"use client";
 
-import NumberInput from "@/components/ui/input/components/NumberInput";
 import OTPInput from "@/components/ui/input/components/OTPInput";
-import TextInput from "@/components/ui/input/components/TextInput";
+import Toast from "@/components/ui/input/components/Toast";
 import { useState } from "react";
-
+import { SquareCheck } from "lucide-react";
 
 export default function Home() {
-     const [otp, setOtp] = useState("");
-
+  const [otp, setOtp] = useState("");
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col gap-6 p-8">
@@ -20,18 +18,7 @@ export default function Home() {
         status="default"
       />
 
-      <TextInput 
-      label="Name"
-      placeholder="Enter your name"
-      required
-
-      />
-
-      <NumberInput 
-      label="Age"
-      placeholder="Enter your age"
-      required
-      />
+      <Toast message="An Error Occurred" variant="warning" />
     </main>
   );
 }
