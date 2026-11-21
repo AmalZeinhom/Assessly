@@ -2,7 +2,8 @@
 
 import { ChangeEvent, SyntheticEvent, useId, useState } from "react";
 import { OTPInputProps } from "../input.types";
-import FormField from "./FormField";
+import FormField from "../components/FormField";
+
 
 export default function OTPInput({
   id,

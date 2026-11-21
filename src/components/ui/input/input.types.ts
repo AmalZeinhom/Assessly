@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from "react";
 import type { CountryCode } from "libphonenumber-js";
 
 export type InputStatus = "default" | "error";
@@ -78,3 +78,12 @@ export interface OTPInputProps {
 
 //!#############################
 
+export interface TextareaProps extends Omit<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  "size"
+> {
+  label: string;
+  status?: InputStatus;
+  errorMessage?: string;
+  showCharacterCount?: boolean;
+}

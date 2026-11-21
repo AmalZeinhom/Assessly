@@ -1,5 +1,7 @@
+'use client'
+
 import TooltipProvider from '@/components/ui/tooltip/TooltipProvider';
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 interface ProvidersProps {
     children: ReactNode; 
