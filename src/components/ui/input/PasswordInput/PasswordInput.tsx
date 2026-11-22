@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { PasswordInputProps } from "../input.types";
-import TextInput from "./TextInput";
+import TextInput from "../components/TextInput";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function PasswordInput({ ...props }: PasswordInputProps) {

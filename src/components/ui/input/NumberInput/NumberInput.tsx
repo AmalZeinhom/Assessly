@@ -1,6 +1,6 @@
 import React from 'react'
 import { NumberInputProps } from '../input.types'
-import TextInput from './TextInput'
+import TextInput from '../components/TextInput'
 
 export default function NumberInput({
     min,
